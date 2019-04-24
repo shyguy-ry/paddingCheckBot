@@ -12,8 +12,7 @@ Basically Rolls a dice and returns a status
 """
 
 #from uuid import uuid4
-from telegram.ext import Updater
-from telegram.ext import CommandHandler
+from telegram.ext import Updater, CommandHandler
 import random as rand
 from time import sleep
 import logging
@@ -21,7 +20,7 @@ import logging
 ############
 #Parameters#
 ############
-authToken = 'auth token goes here' #a token that lets Python communicate with the bot; 
+authToken = '740365252:AAHteK8xQ8lZRH4Bk4vRUOhf6C0mcKEJyRc' #a token that lets Python communicate with the bot; 
 
 ##############
 #Py Functions#
@@ -44,22 +43,27 @@ def checkPadding(username):
     """
     #Roll the dice
     diapercheck = chooseResponse()
+    print(diapercheck)
     
     #Apply the result
     str(username)
     status_dic ={
         0: ["@"+username+" is wet and messy. Bummer, kiddo. Looks like you won't be out of diapers any time soon.",
-            "@"+username+" is wet and messy. Somebody change them before they get a bad rash!"],
+            "@"+username+" is wet and messy. Somebody change them before they get a bad rash!",
+            ],
         1: ["@"+username+" is messy. Oof! That smell is overpowering.",
-            "@"+username+" is messy. Looks like potty training isn't going so well."],
+            "@"+username+" is messy. Looks like potty training isn't going so well.",
+            "@"+username+" is such a little stinker...someone change this bab pronto!"],
         2: ["@"+username+" is soaked! Chance of leaking at 95% if not changed immediately.",
-            "Oh no! @"+username+" is about to leak! Someone needs changing pronto!"],
+            "Oh no! @"+username+" is about to leak! Someone needs changing pronto!",
+            "Uh oh! @"+username+" leaked! Someone needs a thicker diaper..."],
         3: ["@"+username+" is wet, but their diaper can still hold quite a bit more.",
             "@"+username+" is wet. They probably like being in soggy padding or they would have asked for a change by now."],
         4: ["@"+username+" is a little damp. Looks like they're not as big as they think.",
             "@"+username+" is a little damp. Someone didn't quite make it to the potty."],
         5: ["@"+username+" is clean. What a big kid!",
-            "@"+username+" is clean. They must have been changed recently.",
+            "@"+username+" is clean. They must have been changed recently."
+            "Wow! @"+username+"is actually dry...for once.",
             "@"+username+" is clean. They deserve a sticker on their sticker chart."]
         }
     
@@ -110,6 +114,8 @@ def check(bot, update,args):
     bot.send_message(chat_id=update.message.chat_id, text=M1)
     sleep(2) #pause for effect
     
+    #Optional component, removed for...reasons
+    """
     M2 = "Tugging on the back of @"+bab+"'s diaper..."
     bot.send_message(chat_id=update.message.chat_id, text=M2)
     sleep(1.5)#etc
@@ -117,6 +123,7 @@ def check(bot, update,args):
     M3 = "Checking @"+bab+"'s leg cuff for sogginess..."
     bot.send_message(chat_id=update.message.chat_id, text=M3)
     sleep(2)#etc
+    """
     
     outText = checkPadding(bab)
     #send output to bot
