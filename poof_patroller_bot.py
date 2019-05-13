@@ -20,7 +20,7 @@ import logging
 ############
 #Parameters#
 ############
-authToken = '740365252:AAHteK8xQ8lZRH4Bk4vRUOhf6C0mcKEJyRc' #a token that lets Python communicate with the bot; 
+authToken = 'CodeGoesHere' #a token that lets Python communicate with the bot; 
 
 ##############
 #Py Functions#
@@ -58,7 +58,7 @@ def checkPadding(username):
             "Oh no! @"+username+" is about to leak! Someone needs changing pronto!",
             "Uh oh! @"+username+" leaked! Someone needs a thicker diaper..."],
         3: ["@"+username+" is wet, but their diaper can still hold quite a bit more.",
-            "@"+username+" is wet. They probably like being in soggy padding or they would have asked for a change by now."],
+            "@"+username+" is wet. They probably like being in soggy padding or they would have asked for a change by now.",],
         4: ["@"+username+" is a little damp. Looks like they're not as big as they think.",
             "@"+username+" is a little damp. Someone didn't quite make it to the potty."],
         5: ["@"+username+" is clean. What a big kid!",
