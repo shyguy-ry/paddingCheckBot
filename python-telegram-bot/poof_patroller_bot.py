@@ -22,7 +22,7 @@ debug = True
 ############
 #Parameters#
 ############
-authToken = 'CodeHere' #a token that lets Python communicate with the bot; 
+authToken = '740365252:AAE4oZX2SE2Z8y8jfoInGa8gxSQdl24vBJI' #a token that lets Python communicate with the bot; 
 
 ##############
 #Py Functions#
@@ -56,19 +56,16 @@ def checkPadding(username):
             ],
         1: ["@"+username+" is messy. Oof! That smell is overpowering.",
             "@"+username+" is messy. Looks like potty training isn't going so well.",
-            "@"+username+" is such a little stinker...someone change this bab pronto!",
-            "I don't even need to check @"+username+"'s diaper. I can smell it from here. Pee-yew!",
-            "What happened? It stinks in here!\n\n...oh wait, it's just @"+username+"'s diaper. They need a change!" ],
+            "@"+username+" is such a little stinker...someone change this bab pronto!"],
         2: ["@"+username+" is soaked! Chance of leaking at 95% if not changed immediately.",
             "Oh no! @"+username+" is about to leak! Someone needs changing pronto!",
-            "Uh oh! @"+username+" leaked! Someone needs a thicker diaper..."
-            "Uh oh! @"+username+"is leaking everywhere! Someone get them a fresh diaper, pronto!\nAnd better make it a thick one!"],
+            "Uh oh! @"+username+" leaked! Someone needs a thicker diaper..."],
         3: ["@"+username+" is wet, but their diaper can still hold quite a bit more.",
             "@"+username+" is wet. They probably like being in soggy padding or they would have asked for a change by now.",],
         4: ["@"+username+" is a little damp. Looks like they're not as big as they think.",
             "@"+username+" is a little damp. Someone didn't quite make it to the potty."],
         5: ["@"+username+" is clean. What a big kid!",
-            "@"+username+" is clean. They must have been changed recently.",
+            "@"+username+" is clean. They must have been changed recently."
             "Wow! @"+username+" is actually dry...for once.",
             "@"+username+" is clean. They deserve a sticker on their sticker chart."]
         }
